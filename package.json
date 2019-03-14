@@ -1,0 +1,15 @@
+{
+  "name": "diy-webpack-for-react",
+  "version": "1.0.0",
+  "description": "create a react app without create-react-app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack",
+    "react"
+  ],
+  "author": "Allen",
+  "license": "ISC"
+}
