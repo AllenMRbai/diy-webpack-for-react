@@ -10,7 +10,6 @@ const webpack = require("webpack");
 
 module.exports = merge(common, {
   mode: "production",
-  entry: "./src/index.js",
   devtool: "source-map",
   output: {
     filename: "[name].[contentHash].js",
