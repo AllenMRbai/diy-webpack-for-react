@@ -1,23 +1,23 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const merge = require("webpack-merge");
+const common = require("./webpack.common");
 
-module.exports = {
-  mode: "production",
+module.exports = merge(common, {
+  mode: "development",
   entry: "./src/index.js",
+  devtool: "inline-source-map",
   output: {
     filename: "main.js",
+    chunkFilename: "[name].chunk.js",
     path: path.resolve(__dirname, "dist"),
     publicPath: "/"
   },
-  resolve: {
-    extensions: [".js", ".json", ".jsx"]
+  devServer: {
+    historyApiFallback: true
   },
   module: {
     rules: [
-      {
-        test: /\.jsx?$/,
-        use: "babel-loader"
-      },
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
@@ -34,4 +34,4 @@ module.exports = {
       favicon: "./src/assets/favicon-32x32-next.png"
     })
   ]
-};
+});
