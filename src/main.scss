@@ -1,0 +1,54 @@
+@import "./variable.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background-color: rgba($color: #000000, $alpha: 0.1);
+}
+
+a {
+  text-decoration: none;
+  color: $fc1;
+}
+
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.relative {
+  position: relative;
+}
+
+.flex--center {
+  @include flex;
+  justify-content: center;
+}
+
+.flex--between {
+  @include flex;
+  justify-content: space-between;
+}
+
+.flex--around {
+  @include flex;
+  justify-content: space-around;
+}
+
+.flex--start {
+  @include flex;
+  justify-content: flex-start;
+}
+
+.flex--end {
+  @include flex;
+  justify-content: flex-end;
+}

@@ -1,0 +1,18 @@
+@import "../variable.scss";
+.nav-bar {
+  background-color: #fff;
+  box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.1);
+}
+.nav-item {
+  flex: 1;
+  text-align: center;
+}
+.nav-item a {
+  line-height: 40px;
+}
+.nav-item.active {
+  background-color: $theme;
+}
+.nav-item.active a {
+  color: #fff;
+}

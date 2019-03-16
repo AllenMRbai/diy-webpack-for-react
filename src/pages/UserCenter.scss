@@ -1,0 +1,48 @@
+.user-container {
+  background-color: #f6f6f6;
+  width: 98%;
+  border-radius: 8px;
+  margin: 20px auto;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+
+.avatar-container {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.avatar-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.user-info {
+  padding: 8px 10px;
+}
+
+.list-item {
+  background-color: #ccc;
+  width: 96%;
+  height: 30px;
+  margin: 10px auto;
+}
+
+.model-form {
+  background-color: #fff;
+  padding: 10px;
+}
+.model-form input[type="text"] {
+  padding: 4px;
+}
+.model-form h6 {
+  text-align: center;
+  margin: 10px 0;
+}
+.model-form button {
+  padding: 4px;
+  margin: 10px;
+}

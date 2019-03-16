@@ -1,0 +1,10 @@
+$fc1: #000;
+$fc2: #222;
+$fc3: #444;
+
+$theme: crimson;
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}

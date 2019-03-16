@@ -1,0 +1,29 @@
+$grey: #ccc;
+
+.carousel {
+  height: 120px;
+}
+.carousel_item {
+  background-color: $grey;
+  width: 94%;
+  margin: 0 auto;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.menu-bar {
+  padding: 10px;
+}
+.menu-item {
+  width: 40px;
+  height: 40px;
+  background-color: $grey;
+  border-radius: 4px;
+}
+
+.product-item {
+  background-color: $grey;
+  margin: 20px auto;
+  width: 94%;
+  height: 50px;
+}
