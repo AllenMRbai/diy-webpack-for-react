@@ -6,6 +6,26 @@
 
 该项目在不使用`create-react-app`的情况下，使用 webpack 一步步搭建 react 项目。我会记录搭建过程，并与大家分享我的学习成果。
 
+## 项目起步
+
+安装
+
+```bash
+npm install
+```
+
+启动
+
+```bash
+npm start
+```
+
+打包
+
+```bash
+npm run build
+```
+
 ## 目录
 
 - [Home](https://github.com/AllenMRbai/diy-webpack-for-react/wiki)
