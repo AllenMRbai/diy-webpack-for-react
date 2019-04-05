@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { Switch, Route } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import Home from "../pages/Home";
@@ -14,7 +14,7 @@ let navList = [
 export default class Dashboard extends Component {
   render() {
     return (
-      <React.Fragment>
+      <Fragment>
         <NavBar
           style={{ position: "fixed", top: 0, left: 0, right: 0 }}
           navList={navList}
@@ -26,7 +26,7 @@ export default class Dashboard extends Component {
           <Route path="/main/shoppingCart" component={ShoppingCart} />
           <Route path="/main/userCenter" component={UserCenter} />
         </Switch>
-      </React.Fragment>
+      </Fragment>
     );
   }
 }

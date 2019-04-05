@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import "./Home.scss";
 
 export default class Home extends Component {
   render() {
     return (
-      <React.Fragment>
+      <Fragment>
         <ul className="carousel" style={{ margin: "15px 0" }}>
           <li className="carousel_item" />
         </ul>
@@ -18,7 +18,7 @@ export default class Home extends Component {
             return <li key={i} className="product-item" />;
           })}
         </ul>
-      </React.Fragment>
+      </Fragment>
     );
   }
 }
