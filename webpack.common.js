@@ -8,6 +8,12 @@ module.exports = {
   module: {
     rules: [
       {
+        enforce: "pre",
+        test: /\.jsx?$/,
+        include: path.resolve(__dirname, "src"),
+        use: "eslint-loader"
+      },
+      {
         test: /\.jsx?$/,
         include: path.resolve(__dirname, "src"),
         use: "babel-loader"
