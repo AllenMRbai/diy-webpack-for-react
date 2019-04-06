@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   parser: "babel-eslint",
   env: {
     browser: true,
@@ -10,5 +11,9 @@ module.exports = {
     sourceType: "module"
   },
   extends: ["airbnb", "prettier"],
-  rules: {}
+  rules: {
+    "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
+    "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
+    "react/forbid-prop-types": [0]
+  }
 };
