@@ -4,10 +4,10 @@
   "description": "create a react app without create-react-app",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
-    "serve:dist": "npx http-server-spa ./dist",
-    "lint": "eslint --ext .jsx --ext .js --fix ./src"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
+    "lint": "cross-env NODE_ENV=production eslint --ext .jsx --ext .js --fix ./src",
+    "precommit": "npm run lint"
   },
   "keywords": [
     "webpack",
@@ -50,6 +50,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "cross-env": "^5.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
