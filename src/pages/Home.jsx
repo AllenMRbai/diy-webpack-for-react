@@ -1,7 +1,11 @@
 import React, { Fragment } from "react";
+import { login } from "../lib/auth";
+
 import "./Home.scss";
 
 export default function Home() {
+  console.log(login()); // eslint-disable-line
+
   return (
     <Fragment>
       <ul className="carousel" style={{ margin: "15px 0" }}>

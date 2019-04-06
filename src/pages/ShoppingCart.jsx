@@ -22,13 +22,15 @@ class ShoppingCart extends Component {
 
   plus = () => {
     // 测试code spliting
-    import("../lib/utils.js").then(({ plus }) => {
-      this.setState(preState => {
-        return {
-          sum: plus(Number(preState.num1), Number(preState.num2))
-        };
-      });
-    });
+    import(/* webpackChunkName:"utils" */ "../lib/utils.js").then(
+      ({ plus }) => {
+        this.setState(preState => {
+          return {
+            sum: plus(Number(preState.num1), Number(preState.num2))
+          };
+        });
+      }
+    );
   };
 
   render() {

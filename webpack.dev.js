@@ -13,6 +13,16 @@ module.exports = merge(common, {
     publicPath: "/"
   },
   devServer: {
+    host: "0.0.0.0",
+    port: 8080,
+    overlay: {
+      errors: true
+    },
+    // 如果需要代理的话可以配置proxy选项
+    // proxy: {
+    //   "/api": "http://localhost:8080"
+    // },
+    hot: true,
     historyApiFallback: true
   },
   module: {

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "create a react app without create-react-app",
   "main": "index.js",
+  "sideEffects": false,
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --config webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config webpack.prod.js",
@@ -54,6 +55,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-hot-loader": "^4.8.3",
     "react-redux": "^6.0.1",
     "react-router-dom": "^4.4.0",
     "redux": "^4.0.1",
