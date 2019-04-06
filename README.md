@@ -26,7 +26,7 @@ npm start
 npm run build
 ```
 
-## 目录
+## Wiki
 
 - [Home](https://github.com/AllenMRbai/diy-webpack-for-react/wiki)
 - [初步搭建项目](https://github.com/AllenMRbai/diy-webpack-for-react/wiki/%E5%88%9D%E6%AD%A5%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE)
