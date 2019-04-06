@@ -1,7 +1,7 @@
 const CHANGE_NAME = "CHANGE_NAME";
 const INCREASE_AGE = "INCREASE_AGE";
 
-let initState = {
+const initState = {
   name: "Jerry",
   age: 18
 };

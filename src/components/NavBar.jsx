@@ -1,20 +1,26 @@
-import React from "react";
+import React, { Fragment } from "react";
+import PropTypes from "prop-types";
 import "./NavBar.scss";
 
-export default function NavBar(props) {
+function NavBar(props) {
+  const { style, navList, value, onChange } = props;
+
   return (
-    <React.Fragment>
-      <ul style={{ ...props.style }} className="nav-bar flex--around">
-        {props.navList.map(item => {
+    <Fragment>
+      <ul style={{ ...style }} className="nav-bar flex--around">
+        {navList.map(item => {
           return (
             <li
               key={item.path}
-              className={`nav-item ${
-                props.value === item.path ? "active" : ""
-              }`}
-              onClick={() => props.onChange(item.path)}
+              className={`nav-item ${value === item.path ? "active" : ""}`}
             >
-              <a href={item.path} onClick={evt => evt.preventDefault()}>
+              <a
+                href={item.path}
+                onClick={evt => {
+                  evt.preventDefault();
+                  onChange(item.path);
+                }}
+              >
                 {item.title}
               </a>
             </li>
@@ -22,6 +28,18 @@ export default function NavBar(props) {
         })}
       </ul>
       <div style={{ height: "40px" }} />
-    </React.Fragment>
+    </Fragment>
   );
 }
+NavBar.defaultProps = {
+  style: {}
+};
+
+NavBar.propTypes = {
+  style: PropTypes.object,
+  navList: PropTypes.array.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired
+};
+
+export default NavBar;

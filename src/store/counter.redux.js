@@ -2,7 +2,7 @@ const ADD_ITEM = "ADD_ITEM";
 const REMOVE_ITEM = "REMOVE_ITEM";
 const SET_ITEM = "SET_ITEM";
 
-let initState = {
+const initState = {
   total: 20
 };
 

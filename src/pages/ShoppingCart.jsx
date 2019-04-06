@@ -1,15 +1,19 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
+
 import { addOneAsync, removeOneAsync } from "../store/counter.redux";
 import "./ShoppingCart.scss";
 import Counter from "../components/Counter";
 import goldIcon from "../assets/gold-icon.svg";
 
-@connect(
-  state => state.counter,
-  { addOneAsync, removeOneAsync }
-)
+@connect(state => state.counter)
 class ShoppingCart extends Component {
+  static propTypes = {
+    total: PropTypes.number.isRequired,
+    dispatch: PropTypes.func.isRequired
+  };
+
   state = {
     num1: "",
     num2: "",
@@ -29,14 +33,16 @@ class ShoppingCart extends Component {
 
   render() {
     const { num1, num2, sum } = this.state;
+    const { total, dispatch } = this.props;
+
     return (
       <Fragment>
         <div className="cart-item flex--between">
           <img className="gold-icon" src={goldIcon} alt="金币" />
           <Counter
-            value={this.props.total}
-            onAdd={this.props.addOneAsync}
-            onRemove={this.props.removeOneAsync}
+            value={total}
+            onAdd={() => dispatch(addOneAsync())}
+            onRemove={() => dispatch(removeOneAsync())}
           />
         </div>
         <div className="cart-item">
@@ -72,8 +78,7 @@ class ShoppingCart extends Component {
             onClick={this.plus}
             type="button"
           >
-
-            =
+            {"="}
           </button>
           <span style={{ padding: "0 8px", marginLeft: "4px" }}>{sum}</span>
         </div>
