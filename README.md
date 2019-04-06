@@ -29,8 +29,9 @@ npm run build
 ## Wiki
 
 - [Home](https://github.com/AllenMRbai/diy-webpack-for-react/wiki)
-- [初步搭建项目](https://github.com/AllenMRbai/diy-webpack-for-react/wiki/%E5%88%9D%E6%AD%A5%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE)
-- [拆分 webpack 配置](https://github.com/AllenMRbai/diy-webpack-for-react/wiki/%E6%8B%86%E5%88%86webpack%E9%85%8D%E7%BD%AE)
+- [第一章 搭建项目雏形](https://github.com/AllenMRbai/diy-webpack-for-react/wiki/%E7%AC%AC%E4%B8%80%E7%AB%A0-%E6%90%AD%E5%BB%BA%E9%A1%B9%E7%9B%AE%E9%9B%8F%E5%BD%A2)
+- [第二章 拆分 webpack 配置](https://github.com/AllenMRbai/diy-webpack-for-react/wiki/%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E6%8B%86%E5%88%86webpack%E9%85%8D%E7%BD%AE)
+- [第三章 改善项目](https://github.com/AllenMRbai/diy-webpack-for-react/wiki/%E7%AC%AC%E4%B8%89%E7%AB%A0-%E6%94%B9%E5%96%84%E9%A1%B9%E7%9B%AE)
 
 ## 参考
 
